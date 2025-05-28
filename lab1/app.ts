@@ -46,9 +46,9 @@ interface ApiResult<T> {
 }
 
 //Bonus
-function formatResults(response: ApiResult<Product>): void {
+function formatResults(response: ApiResult<ProductOrError>): void {
   // Print product data on success
-  if (response.success) {
+  if (response.success && typeof response.data !== "string") {
     //I will use the function i already made above to print product
     logProduct(response.data);
   } else {
@@ -66,7 +66,7 @@ formatResults({
 
 //Second test the product doesn't exists
 formatResults({
-  data: { id: 0, name: "", price: 0, inStock: false },
+  data: "",
   success: false,
   message: "Product doesn't exist",
 });
