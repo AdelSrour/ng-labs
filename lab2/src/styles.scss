@@ -1,0 +1,95 @@
+:root {
+    --primary: #e0e0e0;
+    --secondary: #a0a0a0;
+    --dark: #121212;
+    --darker: #0a0a0a;
+    --highlight: #6d8cc0;
+    --spacing: 8px;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: var(--primary);
+    line-height: 1.6;
+    background-color: var(--dark);
+    overflow-x: hidden;
+    transition: background-color 0.5s ease, color 0.3s ease;
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4 {
+    font-weight: 600;
+    line-height: 1.2;
+    color: #fff;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    position: relative;
+    display: inline-block;
+    color: #fff;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background-color: var(--highlight);
+    transition: all 0.3s ease;
+}
+
+.text-highlight {
+    color: var(--highlight);
+}
+
+/* Layout */
+.container {
+    padding: 0 2rem;
+    max-width: 1200px;
+}
+
+section {
+    padding: 6rem 0;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

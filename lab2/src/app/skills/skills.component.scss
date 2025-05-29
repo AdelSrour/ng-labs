@@ -1,0 +1,127 @@
+/* skills.component.css */
+.skills {
+    background-color: #121212;
+    padding: 6rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.skills::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 70% 30%, rgba(109, 140, 192, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.skill-category {
+    background: rgba(30, 30, 30, 0.7);
+    border-radius: 12px;
+    padding: 2rem;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-category:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border-color: rgba(109, 140, 192, 0.3);
+}
+
+.skill-category h3 {
+    color: #6d8cc0;
+    margin-bottom: 1.5rem;
+    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+}
+
+.skill {
+    margin-bottom: 1.5rem;
+}
+
+.skill:last-child {
+    margin-bottom: 0;
+}
+
+.skill-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.skill-info span:first-child {
+    color: #e0e0e0;
+}
+
+.skill-info span:last-child {
+    color: #6d8cc0;
+}
+
+.skill-bar {
+    height: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.skill-progress {
+    height: 100%;
+    background: linear-gradient(90deg, #6d8cc0, #8aa8d8);
+    border-radius: 4px;
+    position: relative;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: scaleProgress 1s ease-in-out forwards;
+}
+
+@keyframes scaleProgress {
+    to {
+        transform: scaleX(1);
+    }
+}
+
+/* Light mode overrides */
+.light-mode .skills {
+    background-color: #f8f9fa;
+}
+
+.light-mode .skill-category {
+    background: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.light-mode .skill-category:hover {
+    border-color: rgba(109, 140, 192, 0.3);
+}
+
+.light-mode .skill-info span:first-child {
+    color: #333;
+}
+
+.light-mode .skill-bar {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .skills-container {
+        grid-template-columns: 1fr;
+    }
+
+    .skill-category {
+        padding: 1.5rem;
+    }
+}

@@ -1,0 +1,93 @@
+/* work.component.css */
+.work {
+    background-color: #121212;
+    padding: 6rem 0;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.project-card {
+    background: rgba(30, 30, 30, 0.5);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.project-image {
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.5s ease;
+}
+
+.project-card:hover .project-image {
+    transform: scale(1.05);
+}
+
+.project-info {
+    padding: 1.5rem;
+}
+
+.project-info h3 {
+    margin-bottom: 0.5rem;
+    color: white;
+}
+
+.project-info p {
+    color: #a0a0a0;
+    margin-bottom: 1rem;
+}
+
+.project-link {
+    color: #e0e0e0;
+    font-weight: 500;
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+}
+
+.project-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #6d8cc0;
+    transition: width 0.3s ease;
+}
+
+.project-link:hover::after {
+    width: 100%;
+}
+
+/* Light mode overrides */
+.light-mode .work {
+    background-color: #f8f9fa;
+}
+
+.light-mode .project-card {
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.light-mode .project-info h3 {
+    color: #333;
+}
+
+.light-mode .project-link {
+    color: #333;
+}

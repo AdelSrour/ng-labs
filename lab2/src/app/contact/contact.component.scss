@@ -1,0 +1,76 @@
+/* contact.component.css */
+.contact {
+    background-color: #0a0a0a;
+    padding: 6rem 0;
+}
+
+.contact-info {
+    margin-top: 3rem;
+}
+
+.contact-email {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #e0e0e0;
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+}
+
+.contact-email::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #6d8cc0;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.social-links a {
+    color: #e0e0e0;
+    font-size: 1.25rem;
+    transition: all 0.3s ease;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+a{
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    color: #6d8cc0;
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-3px);
+}
+
+/* Light mode overrides */
+.light-mode .contact {
+    background-color: #e9ecef;
+}
+
+.light-mode .contact-email {
+    color: #333;
+}
+
+.light-mode .social-links a {
+    color: #333;
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.light-mode .social-links a:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
