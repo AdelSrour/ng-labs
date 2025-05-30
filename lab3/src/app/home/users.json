@@ -3,48 +3,56 @@
         "id": 1,
         "username": "Adel Srour",
         "email": "contact@adel.dev",
-        "isValid": true
+        "isValid": true,
+        "phoneNumber": "01154876239"
     },
     {
         "id": 2,
         "username": "Sarah Williams",
         "email": "sarah.w@example.com",
-        "isValid": false
+        "isValid": false,
+        "phoneNumber": "01193456821"
     },
     {
         "id": 3,
         "username": "Michael Brown",
         "email": "michael.b@example.com",
-        "isValid": true
+        "isValid": true,
+        "phoneNumber": "01128764593"
     },
     {
         "id": 4,
         "username": "Emily Davis",
         "email": "emily.d@example.com",
-        "isValid": true
+        "isValid": true,
+        "phoneNumber": "01167389245"
     },
     {
         "id": 5,
         "username": "David Miller",
         "email": "david.m@example.com",
-        "isValid": false
+        "isValid": false,
+        "phoneNumber": "01145982376"
     },
     {
         "id": 6,
         "username": "Jessica Wilson",
         "email": "jessica.w@example.com",
-        "isValid": true
+        "isValid": true,
+        "phoneNumber": "01178623495"
     },
     {
         "id": 7,
         "username": "Daniel Taylor",
         "email": "daniel.t@example.com",
-        "isValid": false
+        "isValid": false,
+        "phoneNumber": "01132568974"
     },
     {
         "id": 8,
         "username": "Olivia Anderson",
         "email": "olivia.a@example.com",
-        "isValid": true
+        "isValid": true,
+        "phoneNumber": "01161237849"
     }
 ]
