@@ -1,6 +1,6 @@
-# Lab3
+# Live Demo
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.13.
+(https://adelsrour.github.io/ng-labs//lab3/dist/lab3/browser/index.html)
 
 ## Development server
 
