@@ -1,12 +1,12 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-user-cart',
+  selector: 'app-user-card',
   imports: [],
-  templateUrl: './user-cart.component.html',
-  styleUrl: './user-cart.component.scss'
+  templateUrl: './user-card.component.html',
+  styleUrl: './user-card.component.scss'
 })
-export class UserCartComponent {
+export class UserCardComponent {
   @Input() userData: user | null = null;
 }
 
