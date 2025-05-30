@@ -1,0 +1,32 @@
+<div class="container mt-5 px-5">
+  <div class="search-container">
+    <div class="input-group mb-3 shadow-sm">
+      <input
+        type="email"
+        class="form-control search-input"
+        placeholder="Search emails..."
+        aria-label="Search emails"
+        appEmailvalidator
+        (validEmail)="searchByEmail($event)"
+        (invalidEmail)="invalidEmail = $event"
+      />
+    </div>
+    <div class="form-text text-danger" *ngIf="invalidEmail">
+      {{ invalidEmail }} is not a valid email address
+    </div>
+    <div class="form-text text-danger" *ngIf="errorMessage">
+      {{ errorMessage }}
+    </div>
+  </div>
+  <div class="mt-4 row g-4">
+    @if(emailInput && !errorMessage){
+    <h3 class="text-muted mb-2">Search results for {{ emailInput }}</h3>
+    }
+    <!-- print users -->
+    @for (user of usersData; track user.id){
+    <div class="col-12 col-md-6">
+      <app-user-cart [userData]="user"></app-user-cart>
+    </div>
+    }
+  </div>
+</div>
