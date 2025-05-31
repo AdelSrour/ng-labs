@@ -1,6 +1,6 @@
-# Lab4
+# Live
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.13.
+(https://adelsrour.github.io/ng-labs/lab4/dist/lab4/browser/index.html)
 
 ## Development server
 
