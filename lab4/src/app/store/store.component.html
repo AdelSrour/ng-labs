@@ -70,6 +70,7 @@
     }
   </div>
 
+  @if (products && products.data && numOfPages>0){
   <!-- Pagination -->
   <div class="pagination">
     <button class="page-nav disabled">
@@ -82,4 +83,5 @@
       <i class="fas fa-chevron-right"></i>
     </button>
   </div>
+  }
 </div>

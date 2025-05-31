@@ -1,2 +1,47 @@
-<p>product works!</p>
-Current Product: {{ currentProduct }}
+<div class="product-container">
+  @if (product && product.data){
+  <div class="product-grid">
+    <!-- Product Images Gallery -->
+    <div class="product-gallery">
+      <div class="main-image">
+        <img
+          [src]="product.data.images[0]"
+          [alt]="product.data.title"
+          class="active"
+        />
+      </div>
+    </div>
+
+    <!-- Product Details -->
+    <div class="product-details">
+      <div class="product-header">
+        <h1 class="product-title">{{ product.data.title }}</h1>
+        <div class="product-meta">
+          <span class="sold-count"
+            ><i class="fas fa-check-circle"></i>
+            {{ product.data.sold | number }} sold</span
+          >
+        </div>
+      </div>
+
+      <div class="product-rating">
+        <div class="stars">
+          {{ product.data.ratingsAverage }} <i class="fa-solid fa-star"></i>
+        </div>
+        <span class="rating-count"
+          >({{ product.data.ratingsQuantity }} reviews)</span
+        >
+      </div>
+
+      <div class="product-price">
+        <span class="current-price">{{ product.data.price | currency }}</span>
+      </div>
+
+      <div class="product-description">
+        <h3>Description</h3>
+        <p>...</p>
+      </div>
+    </div>
+  </div>
+  }
+</div>

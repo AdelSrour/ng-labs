@@ -13,6 +13,15 @@ export class ApiService {
   getAllProducts(page: number): Observable<ProductsResponse>{
     return this.http.get<ProductsResponse>(`${this.apiLink}/api/v1/products?page=${page}`);
   }
+
+  getProduct(_id: string| null): Observable<SingleProduct> {
+    return this.http.get<SingleProduct>(`${this.apiLink}/api/v1/products/${_id}`)
+  }
+}
+
+
+interface SingleProduct {
+  data: Product
 }
 
 interface ProductsResponse {

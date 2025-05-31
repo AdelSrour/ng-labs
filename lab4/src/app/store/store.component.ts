@@ -10,6 +10,7 @@ import { RouterModule } from '@angular/router';
   styleUrl: './store.component.scss'
 })
 export class StoreComponent {
+  numOfPages: number = 0;
   page: number = 1;
   products!: productsResponse;
 
