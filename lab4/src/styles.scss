@@ -1,0 +1,214 @@
+:root {
+    --primary-accent: #6c5ce7;
+    --primary-accent-light: #857beb;
+    --secondary-accent: #00cec9;
+    --dark-bg: #1a1a2e;
+    --darker-bg: #16213e;
+    --light-text: #f1f1f1;
+    --lighter-text: #ffffff;
+    --muted-text: #b8b8b8;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    background-color: var(--dark-bg);
+}
+
+.wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    flex: 1;
+}
+
+/* Modern Navbar */
+.navbar {
+    background-color: var(--darker-bg) !important;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.25);
+    padding: 0.8rem 0;
+}
+
+.nav-logo {
+    font-size: 1.8rem;
+    margin-right: 0.5rem;
+    color: var(--secondary-accent);
+}
+
+.navbar-brand {
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: var(--lighter-text) !important;
+}
+
+.navbar-brand:hover {
+    color: var(--secondary-accent) !important;
+}
+
+/* Modern Nav Links */
+.nav-link {
+    position: relative;
+    color: var(--light-text) !important;
+    font-weight: 500;
+    margin: 0 0.5rem;
+    padding: 0.5rem 1rem !important;
+    transition: all 0.3s ease;
+}
+
+.nav-link i {
+    margin-right: 6px;
+}
+
+.nav-link:hover {
+    color: var(--secondary-accent) !important;
+}
+
+.nav-link.active {
+    color: var(--secondary-accent) !important;
+}
+
+.nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 1rem;
+    right: 1rem;
+    height: 2px;
+    background: var(--secondary-accent);
+    border-radius: 2px;
+}
+
+/* Modern Action Buttons */
+.nav-actions .btn {
+    border-radius: 8px;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+    margin-left: 0.75rem;
+}
+
+.btn-login {
+    background-color: transparent;
+    border: 2px solid var(--primary-accent);
+    color: var(--primary-accent);
+}
+
+.btn-login:hover {
+    background-color: var(--primary-accent);
+    color: white;
+}
+
+.btn-register {
+    background-color: var(--primary-accent);
+    border: 2px solid var(--primary-accent);
+    color: white;
+}
+
+.btn-register:hover {
+    background-color: var(--primary-accent-light);
+    border-color: var(--primary-accent-light);
+}
+
+.btn-cart {
+    background-color: transparent;
+    border: 2px solid var(--secondary-accent);
+    color: var(--secondary-accent);
+}
+
+.btn-cart:hover {
+    background-color: var(--secondary-accent);
+    color: white;
+}
+
+.badge-cart {
+    font-size: 0.6rem;
+    padding: 0.25rem 0.4rem;
+}
+
+/* Modern Footer */
+.footer {
+    background-color: var(--darker-bg);
+    color: var(--muted-text);
+    padding: 3rem 0 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer h5 {
+    color: var(--lighter-text);
+    font-weight: 600;
+    margin-bottom: 1.25rem;
+    font-size: 1.1rem;
+}
+
+.footer a {
+    color: var(--muted-text);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.footer a:hover {
+    color: var(--secondary-accent);
+    padding-left: 3px;
+}
+
+.footer .list-unstyled li {
+    margin-bottom: 0.75rem;
+}
+
+.footer .list-unstyled i {
+    width: 20px;
+    color: var(--secondary-accent);
+}
+
+.social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    margin-right: 0.75rem;
+    transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+    background: var(--primary-accent);
+    color: white !important;
+    transform: translateY(-3px);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 1.5rem;
+    margin-top: 2rem;
+}
+
+/* Newsletter Form */
+.newsletter-input {
+    background: rgba(255, 255, 255, 0.05);
+    border: none;
+    color: white;
+    border-radius: 8px 0 0 8px !important;
+}
+
+.newsletter-input:focus {
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: none;
+    color: white;
+}
+
+.newsletter-btn {
+    background: var(--primary-accent);
+    border: none;
+    border-radius: 0 8px 8px 0 !important;
+    transition: all 0.3s ease;
+}
+
+.newsletter-btn:hover {
+    background: var(--primary-accent-light);
+}

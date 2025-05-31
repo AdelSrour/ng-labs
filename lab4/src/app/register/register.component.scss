@@ -1,0 +1,40 @@
+/* Reuse auth styles from login.css */
+@import url('../login/login.component.scss');
+
+/* Additional register-specific styles */
+.password-hints {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.password-hints .hint {
+    color: var(--muted-text);
+    font-size: 0.75rem;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+}
+
+.terms-group {
+    margin: 1.5rem 0;
+    color: var(--muted-text);
+}
+
+.terms-group a {
+    color: var(--primary-accent);
+    text-decoration: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+    .password-hints {
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+
+    .auth-form {
+        padding: 0 1.5rem 1rem;
+    }
+}

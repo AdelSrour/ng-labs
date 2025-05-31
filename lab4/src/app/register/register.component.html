@@ -1,0 +1,117 @@
+<div class="auth-container">
+  <div class="auth-card">
+    <!-- Header -->
+    <div class="auth-header">
+      <i class="fas fa-user-plus auth-icon"></i>
+      <h2 class="auth-title">Create Account</h2>
+      <p class="auth-subtitle">Join us today for exclusive features</p>
+    </div>
+
+    <!-- Registration Form -->
+    <form class="auth-form">
+      Nexus<!-- Name -->
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <div class="input-group">
+          <span class="input-icon">
+            <i class="fas fa-user"></i>
+          </span>
+          <input
+            type="text"
+            id="name"
+            placeholder="John Doe"
+            class="form-control"
+          />
+        </div>
+      </div>
+
+      <!-- Email -->
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <div class="input-group">
+          <span class="input-icon">
+            <i class="fas fa-envelope"></i>
+          </span>
+          <input
+            type="email"
+            id="email"
+            placeholder="your@email.com"
+            class="form-control"
+          />
+        </div>
+      </div>
+
+      <!-- Password -->
+      <div class="form-group">
+        <label for="password">Password</label>
+        <div class="input-group">
+          <span class="input-icon">
+            <i class="fas fa-lock"></i>
+          </span>
+          <input
+            type="password"
+            id="password"
+            placeholder="••••••••"
+            class="form-control"
+          />
+          <button type="button" class="btn-password-toggle">
+            <i class="fas fa-eye"></i>
+          </button>
+        </div>
+        <div class="password-hints">
+          <span class="hint">At least 8 characters</span>
+          <span class="hint">One uppercase</span>
+          <span class="hint">One number</span>
+        </div>
+      </div>
+
+      <!-- Confirm Password -->
+      <div class="form-group">
+        <label for="confirm-password">Confirm Password</label>
+        <div class="input-group">
+          <span class="input-icon">
+            <i class="fas fa-lock"></i>
+          </span>
+          <input
+            type="password"
+            id="confirm-password"
+            placeholder="••••••••"
+            class="form-control"
+          />
+        </div>
+      </div>
+
+      <!-- Terms Checkbox -->
+      <div class="form-check terms-group">
+        <input type="checkbox" id="terms" class="form-check-input" />
+        <label for="terms"
+          >I agree to the <a href="#terms">Terms of Service</a> and
+          <a href="#privacy">Privacy Policy</a></label
+        >
+      </div>
+
+      <!-- Submit Button -->
+      <button type="submit" class="btn-auth-submit">
+        <i class="fas fa-user-plus"></i> Create Account
+      </button>
+
+      <!-- Divider -->
+      <!-- <div class="auth-divider">
+        <span>OR</span>
+      </div>
+      <div class="social-auth">
+        <p>Sign up with social account</p>
+        <div class="social-icons">
+          <a href="#" class="social-btn"><i class="fab fa-google"></i></a>
+          <a href="#" class="social-btn"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-btn"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div> -->
+    </form>
+
+    <!-- Footer -->
+    <div class="auth-footer">
+      Already have an account? <a href="#login">Sign in</a>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+<div class="not-found text-center py-5">
+  <div class="error-icon mb-4">
+    <i
+      class="fas fa-exclamation-triangle fa-4x"
+      style="color: var(--primary-accent)"
+    ></i>
+  </div>
+  <h2 class="mb-3" style="color: var(--lighter-text)">Page Not Found</h2>
+  <p class="lead mb-4" style="color: var(--muted-text)">
+    We can't seem to find the page you're looking for.
+  </p>
+  <a
+    [routerLink]="['/']"
+    class="btn btn-primary px-4"
+    style="
+      background-color: var(--primary-accent);
+      border-color: var(--primary-accent);
+    "
+  >
+    <i class="fas fa-arrow-left me-2"></i>Back to Home
+  </a>
+</div>
