@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { UserCartComponent } from '../user-cart/user-cart.component';
+import { UserCardComponent } from '../user-card/user-card.component';
 import { EmailvalidatorDirective } from '../directives/emailvalidator.directive';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -8,7 +8,7 @@ import usersDataJson from './users.json';
 
 @Component({
   selector: 'app-home',
-  imports: [UserCartComponent,EmailvalidatorDirective,CommonModule,FormsModule],
+  imports: [UserCardComponent,EmailvalidatorDirective,CommonModule,FormsModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
