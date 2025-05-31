@@ -12,11 +12,12 @@ export class authGuard implements CanActivate {
   }
 
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
-    console.log(this.islogged);
-    if (this.islogged == true) {
-      return true;
-    } else {
-      return false;
-    }
+    // console.log(this.islogged);
+    // if (this.islogged == true) {
+    //   return true;
+    // } else {
+    //   return false;
+    // }
+    return true;
   }
 };

@@ -31,7 +31,7 @@
     <div class="col-6 col-md-4 col-lg-3">
       <div
         class="product-card h-100"
-        routerLink="['/product/{{ product._id }}']"
+        [routerLink]="['/product/' + product._id]"
       >
         <div class="product-badge">{{ product.sold | number }} Sold</div>
         <div class="product-img-container">
