@@ -1,6 +1,6 @@
 # Live
 
-(https://adelsrour.github.io/ng-labs/lab4/dist/lab4/browser/index.html)
+Demo: https://adelsrour.github.io/ng-labs/lab4/dist/lab4/browser/index.html
 
 ## Development server
 
