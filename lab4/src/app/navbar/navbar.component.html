@@ -18,18 +18,29 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <!-- Center links -->
       <ul class="navbar-nav mx-auto">
-        <li class="nav-item">
-          <a class="nav-link active" [routerLink]="['/']"
-            ><i class="fas fa-home"></i> Home</a
+        <!-- <li class="nav-item">
+          <a
+            class="nav-link"
+            [routerLink]="['/']"
+            [routerLinkActive]="'active'"
+            [routerLinkActiveOptions]="{ exact: true }"
           >
-        </li>
+            <i class="fas fa-home"></i> Home</a
+          >
+        </li> -->
         <li class="nav-item">
-          <a class="nav-link" [routerLink]="['/store']"
+          <a
+            class="nav-link"
+            [routerLink]="['/store']"
+            [routerLinkActive]="'active'"
             ><i class="fas fa-store"></i> Store</a
           >
         </li>
         <li class="nav-item">
-          <a class="nav-link" [routerLink]="['/trending']"
+          <a
+            class="nav-link"
+            [routerLink]="['/trending']"
+            [routerLinkActive]="'active'"
             ><i class="fas fa-fire"></i> Trending</a
           >
         </li>
@@ -37,13 +48,25 @@
 
       <!-- Right side actions -->
       <div class="nav-actions d-flex">
-        <a [routerLink]="['/login']" class="btn btn-login">
+        <a
+          [routerLink]="['/login']"
+          [routerLinkActive]="'active'"
+          class="btn btn-login"
+        >
           <i class="fas fa-sign-in-alt me-1"></i> Login
         </a>
-        <a [routerLink]="['/register']" class="btn btn-register">
+        <a
+          [routerLink]="['/register']"
+          [routerLinkActive]="'active'"
+          class="btn btn-register"
+        >
           <i class="fas fa-user-plus me-1"></i> Register
         </a>
-        <a [routerLink]="['/cart']" class="btn btn-cart position-relative">
+        <a
+          [routerLink]="['/cart']"
+          [routerLinkActive]="'active'"
+          class="btn btn-cart position-relative"
+        >
           <i class="fas fa-shopping-bag"></i>
           <span
             class="position-absolute top-0 start-100 translate-middle badge badge-cart rounded-pill bg-danger"

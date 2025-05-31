@@ -42,7 +42,7 @@
             <i class="fas fa-eye"></i>
           </button>
         </div>
-        <a href="#forgot" class="forgot-link">Forgot password?</a>
+        <a [routerLink]="['/forgot']" class="forgot-link">Forgot password?</a>
       </div>
 
       <!-- Remember & Submit -->
@@ -74,7 +74,7 @@
 
     <!-- Footer -->
     <div class="auth-footer">
-      Don't have an account? <a href="#register">Sign up</a>
+      Don't have an account? <a [routerLink]="['/register']">Sign up</a>
     </div>
   </div>
 </div>
