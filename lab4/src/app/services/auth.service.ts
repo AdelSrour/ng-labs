@@ -6,7 +6,9 @@ import { Injectable } from '@angular/core';
 export class AuthService {
   logged!: boolean;
   email!: string | null; 
-  constructor() { }
+  constructor() { 
+    this.email = this.getEmail();
+  }
 
   getEmail():string | null {
     const email = localStorage.getItem("user");
@@ -25,5 +27,6 @@ export class AuthService {
   logout() {
     this.logged = false;
     this.email = null;
+    localStorage.removeItem("user");
   }
 }

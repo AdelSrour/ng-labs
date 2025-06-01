@@ -10,6 +10,11 @@
     <!-- Registration Form -->
     <form class="auth-form" [formGroup]="signupForm" (ngSubmit)="signup()">
       <!-- Email -->
+      @if (errorMessage){
+      <div class="text-danger m-3 text-center bg-dark p-2 rounded">
+        {{ errorMessage }}
+      </div>
+      }
       <div class="form-group">
         <label for="email">Email Address</label>
         <div class="input-group">
@@ -24,6 +29,9 @@
             formControlName="email"
           />
         </div>
+        @if (this.email.invalid && (this.email.dirty || this.email.touched)){
+        <div class="text-danger">Please enter a valid Email</div>
+        }
       </div>
 
       <!-- Password -->
@@ -49,23 +57,10 @@
           <span class="hint">One uppercase</span>
           <span class="hint">One number</span>
         </div>
-      </div>
-
-      <!-- Confirm Password -->
-      <div class="form-group">
-        <label for="confirm-password">Confirm Password</label>
-        <div class="input-group">
-          <span class="input-icon">
-            <i class="fas fa-lock"></i>
-          </span>
-          <input
-            type="password"
-            id="confirm-password"
-            placeholder="••••••••"
-            class="form-control"
-            formControlName="repassword"
-          />
-        </div>
+        @if (this.password.invalid && (this.password.dirty ||
+        this.password.touched)){
+        <div class="text-danger mb-2">Please enter a valid password</div>
+        }
       </div>
 
       <!-- Terms Checkbox -->
@@ -78,8 +73,18 @@
       </div>
 
       <!-- Submit Button -->
-      <button type="submit" class="btn-auth-submit">
-        <i class="fas fa-user-plus"></i> Create Account
+      <button
+        type="submit"
+        class="btn-auth-submit"
+        [disabled]="this.signupForm.invalid || submitting"
+      >
+        @if (submitting){
+        <span
+          class="spinner-border spinner-border-sm"
+          aria-hidden="true"
+        ></span>
+        <span role="status"> Creating account...</span>}@else {
+        <i class="fas fa-user-plus"></i> Create Account}
       </button>
 
       <!-- Divider -->

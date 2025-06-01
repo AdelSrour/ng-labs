@@ -48,7 +48,12 @@
 
       <!-- Right side actions -->
       <div class="nav-actions d-flex">
-        {{ email }}
+        @if (this.auth.email){
+        <div class="align-middle p-2">Welcome back, {{ this.auth.email }}</div>
+        <a (click)="this.auth.logout()" class="btn btn-login">
+          <i class="fas fa-sign-out-alt me-1"></i> Logout
+        </a>
+        }@else{
         <a
           [routerLink]="['/login']"
           [routerLinkActive]="'active'"
@@ -61,8 +66,8 @@
           [routerLinkActive]="'active'"
           class="btn btn-register"
         >
-          <i class="fas fa-user-plus me-1"></i> Register
-        </a>
+          <i class="fas fa-user-plus me-1"></i> Register </a
+        >}
         <a
           [routerLink]="['/cart']"
           [routerLinkActive]="'active'"

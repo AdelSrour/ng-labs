@@ -10,11 +10,6 @@ import { AuthService } from '../services/auth.service';
   styleUrl: './navbar.component.scss'
 })
 export class NavbarComponent {
-  email :string | null= null;
-  constructor(private auth: AuthService) {
-  }
-
-  ngOnInit() {
-    this.email = this.auth.email;
+  constructor(public auth: AuthService) {
   }
 }

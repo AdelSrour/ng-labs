@@ -38,7 +38,7 @@ export class LoginComponent {
         if (value.message == "success") {
           //should be storing jwt token and decode it later, im too lazy to do so anyone uses that code don't do what im doing here.
           localStorage.setItem("user", value.user.email);
-          this.auth.login();
+          this.auth.email = value.user.email
           this.route.navigate(['/']);
         } else {
           this.errorMessage = value.message;

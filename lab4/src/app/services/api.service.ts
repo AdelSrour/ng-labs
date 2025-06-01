@@ -25,6 +25,15 @@ export class ApiService {
       password,
     });
   }
+
+  signUp(email: string | null, password: string | null) {
+    return this.http.post(`${this.apiLink}/api/v1/auth/signup`, {
+      name: "unsigned",
+      email,
+      password,
+      rePassword:password
+    });
+  }
 }
 
 
