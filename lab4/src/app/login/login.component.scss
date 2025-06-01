@@ -208,4 +208,9 @@
 
 .auth-footer a {
     color: var(--primary-accent);
-    text-decoration: none; }
+    text-decoration: none; 
+}
+
+.btn-auth-submit:disabled{
+    cursor:not-allowed;
+}

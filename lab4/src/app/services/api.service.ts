@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { AuthService } from './auth.service';
 
 
 @Injectable({
@@ -16,6 +17,13 @@ export class ApiService {
 
   getProduct(_id: string| null): Observable<SingleProduct> {
     return this.http.get<SingleProduct>(`${this.apiLink}/api/v1/products/${_id}`)
+  }
+
+  signIn(email: string | null, password: string | null) {
+    return this.http.post(`${this.apiLink}/api/v1/auth/signin`, {
+      email,
+      password,
+    });
   }
 }
 
