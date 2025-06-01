@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -6,7 +7,8 @@ import { Injectable } from '@angular/core';
 export class AuthService {
   logged!: boolean;
   email!: string | null; 
-  constructor() { 
+  products: number | any = localStorage.getItem("products");
+  constructor(private route:Router) { 
     this.email = this.getEmail();
   }
 
@@ -28,5 +30,6 @@ export class AuthService {
     this.logged = false;
     this.email = null;
     localStorage.removeItem("user");
+    this.route.navigate(['/login']);
   }
 }

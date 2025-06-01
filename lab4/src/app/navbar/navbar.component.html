@@ -68,16 +68,12 @@
         >
           <i class="fas fa-user-plus me-1"></i> Register </a
         >}
-        <a
-          [routerLink]="['/cart']"
-          [routerLinkActive]="'active'"
-          class="btn btn-cart position-relative"
-        >
+        <a class="btn btn-cart position-relative">
           <i class="fas fa-shopping-bag"></i>
           <span
             class="position-absolute top-0 start-100 translate-middle badge badge-cart rounded-pill bg-danger"
           >
-            0
+            {{ this.auth.products || 0 }}
             <span class="visually-hidden">items in cart</span>
           </span>
         </a>

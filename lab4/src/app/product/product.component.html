@@ -36,11 +36,12 @@
       <div class="product-price">
         <span class="current-price">{{ product.data.price | currency }}</span>
       </div>
-
-      <div class="product-description">
-        <h3>Description</h3>
-        <p>...</p>
-      </div>
+      @if (cartmessage){
+      <div class="text-success fw-bold">{{ cartmessage }}</div>
+      }
+      <button (click)="addToCart()" class="btn btn-outline-primary p-2">
+        Add to cart
+      </button>
     </div>
   </div>
   }@else {
