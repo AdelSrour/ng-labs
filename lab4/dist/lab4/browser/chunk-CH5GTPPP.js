@@ -1,0 +1,1 @@
+import{a as i}from"./chunk-YFGTGYJ4.js";import{M as a,R as r}from"./chunk-DA2OFBHU.js";var c=class t{constructor(e){this.auth=e}islogged=!1;canActivate(e,o){return!0}static \u0275fac=function(o){return new(o||t)(r(i))};static \u0275prov=a({token:t,factory:t.\u0275fac,providedIn:"root"})};export{c as a};
