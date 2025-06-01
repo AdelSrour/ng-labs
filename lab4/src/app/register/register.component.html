@@ -8,23 +8,7 @@
     </div>
 
     <!-- Registration Form -->
-    <form class="auth-form">
-      Nexus<!-- Name -->
-      <div class="form-group">
-        <label for="name">Full Name</label>
-        <div class="input-group">
-          <span class="input-icon">
-            <i class="fas fa-user"></i>
-          </span>
-          <input
-            type="text"
-            id="name"
-            placeholder="John Doe"
-            class="form-control"
-          />
-        </div>
-      </div>
-
+    <form class="auth-form" [formGroup]="signupForm" (ngSubmit)="signup()">
       <!-- Email -->
       <div class="form-group">
         <label for="email">Email Address</label>
@@ -37,6 +21,7 @@
             id="email"
             placeholder="your@email.com"
             class="form-control"
+            formControlName="email"
           />
         </div>
       </div>
@@ -53,6 +38,7 @@
             id="password"
             placeholder="••••••••"
             class="form-control"
+            formControlName="password"
           />
           <button type="button" class="btn-password-toggle">
             <i class="fas fa-eye"></i>
@@ -77,6 +63,7 @@
             id="confirm-password"
             placeholder="••••••••"
             class="form-control"
+            formControlName="repassword"
           />
         </div>
       </div>
